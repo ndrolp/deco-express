@@ -1,0 +1,42 @@
+{
+  "name": "deco-express",
+  "version": "0.1.0",
+  "author": "ndrolp",
+  "description": "Decorator-based utilities for building Express.js REST APIs in TypeScript",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "decorators",
+    "rest",
+    "api",
+    "controller",
+    "routing",
+    "joi",
+    "validation"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.17",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "reflect-metadata": "^0.2.2"
+  }
+}
