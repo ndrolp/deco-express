@@ -16,7 +16,7 @@ npm install deco-express reflect-metadata
 
 ```ts
 // src/main.ts
-import "reflect-metadata";
+import 'reflect-metadata';
 ```
 
 Also ensure your `tsconfig.json` includes:
@@ -35,25 +35,25 @@ Also ensure your `tsconfig.json` includes:
 ## Quick Start
 
 ```ts
-import "reflect-metadata";
-import express from "express";
-import Joi from "joi";
-import { Controller, Route, Validate, defineRoutes } from "deco-express";
+import 'reflect-metadata';
+import express from 'express';
+import Joi from 'joi';
+import { Controller, Route, Validate, defineRoutes } from 'deco-express';
 
 const createUserSchema = Joi.object({
   name: Joi.string().required(),
   email: Joi.string().email().required(),
 });
 
-@Controller("/users")
+@Controller('/users')
 class UserController {
-  @Route("get", "/list")
+  @Route('get', '/list')
   async list(req, res) {
     res.json({ users: [] });
   }
 
   @Validate(createUserSchema)
-  @Route("post", "/create")
+  @Route('post', '/create')
   async create(req, res) {
     res.status(201).json({ created: req.body });
   }

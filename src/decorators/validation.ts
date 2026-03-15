@@ -33,7 +33,7 @@ import Joi from 'joi';
  * }
  * ```
  */
-export function Validate(schema: Joi.Schema) {
+export function Validate(schema: Joi.ObjectSchema) {
   return function (
     _target: object,
     _propertyKey: string,
